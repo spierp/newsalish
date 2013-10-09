@@ -32,10 +32,6 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-group :production do
-  gem 'pg', '0.12.2'
-end
-
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -47,3 +43,7 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+#for heroku
+gem 'rails_12factor', group: :production
+gem 'pg', group: :production
