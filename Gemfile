@@ -4,6 +4,11 @@ ruby "1.9.3"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
+gem 'activerecord', :require => 'active_record'
+gem 'do_postgres'
+gem 'datamapper'
+gem 'sequel'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 gem 'anjlab-bootstrap-rails', '~> 3.0.0.3', :require => 'bootstrap-rails'
@@ -16,7 +21,6 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-gem 'sqlite3', group: :development
   
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -26,6 +30,11 @@ gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
+
+group :development do
+  gem 'sqlite3', '1.3.7'
+  gem 'rspec-rails', '2.11.0'
+end
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -44,6 +53,7 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-#for heroku
-gem 'rails_12factor', group: :production
-gem 'pg', '~> 0.15.1', group: :production
+group :production do
+  gem 'rails_12factor'
+  gem 'pg', '0.12.2'
+end
