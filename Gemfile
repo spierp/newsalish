@@ -4,11 +4,6 @@ ruby "1.9.3"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
-#gem 'activerecord', :require => 'active_record'
-#gem 'do_postgres'
-#gem 'datamapper'
-#gem 'sequel'
-
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 gem 'anjlab-bootstrap-rails', '~> 3.0.0.3', :require => 'bootstrap-rails'
